@@ -1,19 +1,21 @@
-/* Variáveis para Controle de Temas e Cores Harmonizadas */
+/* ==========================================================================
+   VÁRIAVEIS PARA CONTROLE DE TEMAS E CORES HARMONIZADAS
+   ========================================================================== */
 :root {
     --bg-color: #faf8f5;           /* Amarelo Baunilha muito claro */
     --text-color: #2c251e;
     --primary-color: #e6a100;
     --primary-hover: #cc8f00;
     --accent-color: #4a5d4e;
-    --card-bg: #ffffff;
+    --card-bg: rgba(255, 255, 255, 0.75); /* Vidro translúcido para o tema claro */
     --border-color: #e8e3dc;
     
-    /* Configurações do Menu Lateral */
-    --sidebar-bg: #1e2e22;         /* Verde Floresta Escuro (Alto Contraste) */
+    /* Configurações do Menu Lateral (Verde Escuro Profundo) */
+    --sidebar-bg: #0b1a10;         
     --sidebar-text: #f5f0ea;
     --sidebar-link-hover: #ffc43d;
     
-    --shadow: 0 4px 20px rgba(0,0,0,0.05);
+    --shadow: 0 8px 32px rgba(184, 134, 11, 0.05);
     --transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
@@ -23,16 +25,19 @@
     --primary-color: #ffc43d;
     --primary-hover: #e6ab19;
     --accent-color: #8fa895;
-    --card-bg: #1e1a16;
+    --card-bg: rgba(30, 26, 22, 0.75); /* Vidro translúcido para o tema escuro */
     --border-color: #2d2722;
     
-    --sidebar-bg: #0b120e;
+    /* Configurações do Menu Lateral no Tema Escuro */
+    --sidebar-bg: #050d08;         
     --sidebar-text: #ebdcd0;
     --sidebar-link-hover: #ffc43d;
-    --shadow: 0 4px 20px rgba(0,0,0,0.3);
+    --shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 }
 
-/* Reset e Estrutura Geral */
+/* ==========================================================================
+   RESET, ESTRUTURA GERAL E ANIMAÇÕES
+   ========================================================================== */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -48,7 +53,38 @@ body {
     overflow-x: hidden;
 }
 
-/* Cabeçalho Fixo */
+/* Imagens Responsivas e Fluidas */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Barra de Rolagem Personalizada (Estilo Premium Mel) */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: var(--bg-color); 
+}
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color); 
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-hover); 
+}
+
+/* Animação de Pulsar para Botões Principais */
+@keyframes pulse-yellow {
+    0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(230, 161, 0, 0.4); }
+    70% { transform: scale(1.02); box-shadow: 0 0 0 10px rgba(230, 161, 0, 0); }
+    100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(230, 161, 0, 0); }
+}
+
+/* ==========================================================================
+   CABEÇALHO FIXO
+   ========================================================================== */
 header {
     position: fixed;
     top: 0;
@@ -56,6 +92,8 @@ header {
     width: 100%;
     height: 70px;
     background-color: var(--card-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--border-color);
     display: flex;
     align-items: center;
@@ -101,8 +139,12 @@ header {
     margin-left: 20px;
 }
 
+/* Degradê Moderno no Logo */
 .logo span {
-    color: var(--primary-color);
+    background: linear-gradient(135deg, var(--primary-color), #ff8c00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 800;
 }
 
 .header-controls {
@@ -131,7 +173,9 @@ header {
     background-color: var(--card-bg);
 }
 
-/* Painel Lateral Deslizante Esquerdo (Sidebar) */
+/* ==========================================================================
+   PAINEL LATERAL DESLIZANTE (SIDEBAR) - MUDANÇA PARA VERDE ESCURO AO ABRIR
+   ========================================================================== */
 .nav-sidebar {
     position: fixed;
     top: 0;
@@ -140,15 +184,17 @@ header {
     height: 100vh;
     background-color: var(--sidebar-bg);
     z-index: 1100;
-    box-shadow: 4px 0 25px rgba(0, 0, 0, 0.15);
+    box-shadow: 4px 0 25px rgba(0, 0, 0, 0.2);
     display: flex;
     flex-direction: column;
     padding: 80px 24px 40px 24px;
     transition: var(--transition);
 }
 
+/* Força a cor verde escura ao abrir através da classe .open */
 .nav-sidebar.open {
     left: 0;
+    background-color: var(--sidebar-bg); 
 }
 
 .close-menu-btn {
@@ -199,7 +245,7 @@ header {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.5);
     z-index: 1050;
     opacity: 0;
     visibility: hidden;
@@ -211,7 +257,9 @@ header {
     visibility: visible;
 }
 
-/* Estrutura das Seções SPA */
+/* ==========================================================================
+   ESTRUTURA DAS SEÇÕES SPA
+   ========================================================================== */
 .spa-section {
     display: none;
     opacity: 0;
@@ -343,7 +391,9 @@ header {
     transition: var(--transition);
 }
 
-/* Elementos Tipográficos e Cards */
+/* ==========================================================================
+   ELEMENTOS TIPOGRÁFICOS E CARDS COM GLASSMORPHISM
+   ========================================================================== */
 .section-header {
     margin-bottom: 35px;
     border-left: 5px solid var(--primary-color);
@@ -373,14 +423,23 @@ header {
     margin-top: 30px;
 }
 
+/* Efeito Moderno de Vidro Fosco (Glassmorphism) nos Cards */
 .card {
     background-color: var(--card-bg);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     border: 1px solid var(--border-color);
     border-radius: 12px;
     padding: 24px;
     margin-bottom: 20px;
     box-shadow: var(--shadow);
     transition: var(--transition);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(184, 134, 11, 0.12);
+    border-color: var(--primary-color);
 }
 
 .card p {
@@ -407,6 +466,8 @@ header {
 /* Bibliografia */
 .bibliography-box {
     background-color: var(--card-bg);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     border: 1px solid var(--border-color);
     border-left: 4px solid var(--accent-color);
     border-radius: 8px;
@@ -447,6 +508,12 @@ header {
     text-align: center;
     margin-bottom: 20px;
     box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.metric-block:hover {
+    border-color: var(--primary-color);
+    transform: scale(1.02);
 }
 
 .metric-value {
@@ -461,7 +528,9 @@ header {
     font-weight: 600;
 }
 
-/* E-COMMERCE ESTILIZAÇÃO AVANÇADA */
+/* ==========================================================================
+   E-COMMERCE ESTILIZAÇÃO AVANÇADA
+   ========================================================================== */
 .store-filter-bar {
     display: flex;
     flex-wrap: wrap;
@@ -499,6 +568,8 @@ header {
 
 .product-card {
     background-color: var(--card-bg);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     border: 1px solid var(--border-color);
     border-radius: 16px;
     overflow: hidden;
@@ -511,7 +582,8 @@ header {
 
 .product-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    box-shadow: 0 12px 40px rgba(184, 134, 11, 0.15);
+    border-color: var(--primary-color);
 }
 
 .prod-badge {
@@ -520,10 +592,12 @@ header {
     left: 15px;
     background-color: #2e5a27;
     color: #fff;
-    font-size: 0.75rem;
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
     font-weight: 700;
     padding: 5px 12px;
-    border-radius: 20px;
+    border-radius: 50px;
     z-index: 5;
     box-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
@@ -627,7 +701,9 @@ header {
     background-color: var(--primary-hover);
 }
 
-/* Formulário e Rodapé */
+/* ==========================================================================
+   FORMULÁRIO E RODAPÉ
+   ========================================================================== */
 .contact-form-container {
     max-width: 650px;
     margin: 0 auto;
@@ -645,9 +721,18 @@ header {
     background-color: var(--bg-color); color: var(--text-color); border-radius: 8px; outline: none;
 }
 
-.btn-submit {
-    background-color: var(--primary-color); color: #000; border: none;
-    padding: 14px 28px; font-size: 1rem; font-weight: 700; border-radius: 8px; cursor: pointer; width: 100%;
+/* Botão de envio com a animação ativa de pulsar */
+.btn-submit, #btnCalcular {
+    background-color: var(--primary-color); 
+    color: #000; 
+    border: none;
+    padding: 14px 28px; 
+    font-size: 1rem; 
+    font-weight: 700; 
+    border-radius: 8px; 
+    cursor: pointer; 
+    width: 100%;
+    animation: pulse-yellow 2s infinite; /* Convite visual para clique */
 }
 
 .feedback-msg { margin-top: 15px; padding: 12px; border-radius: 8px; text-align: center; font-weight: 600; }
@@ -655,7 +740,9 @@ header {
 .hidden { display: none; }
 footer { background-color: var(--card-bg); border-top: 1px solid var(--border-color); padding: 30px; text-align: center; margin-top: 40px; }
 
-/* Media Queries Responsivas (Layout em Grid de Produtos) */
+/* ==========================================================================
+   MEDIA QUERIES RESPONSIVAS (LAYOUT EM GRID)
+   ========================================================================== */
 @media (min-width: 768px) {
     .grid-3col, .metrics-container {
         display: table; width: 100%; table-layout: fixed; border-collapse: separate; border-spacing: 20px 0;
