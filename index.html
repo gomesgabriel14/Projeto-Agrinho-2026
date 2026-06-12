@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoAbelhas - Análise Biofísica, Impacto Ecossistêmico e Bio-Produtos</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Importação do Font Awesome para ícones das redes sociais -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <button class="hamburger" id="menuBtn" aria-label="Abrir menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+        
+        <a class="logo" id="logoHome">🐝 Eco<span>Abelhas</span></a>
+        
+        <div class="header-controls">
+            <!-- Ícones atualizados do cabeçalho com Font Awesome + WhatsApp -->
+            <div class="social-header-share" style="display: flex; gap: 6px; margin-right: 4px;">
+                <a href="https://api.whatsapp.com/send?text=Confira%20o%20EcoAbelhas!" target="_blank" title="Compartilhar no WhatsApp" style="text-decoration: none; color: inherit; font-size: 14px; background: var(--bg-color); border: 1px solid var(--border-color); width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; border-radius: 20px;"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://facebook.com" target="_blank" title="Compartilhar no Facebook" style="text-decoration: none; color: inherit; font-size: 14px; background: var(--bg-color); border: 1px solid var(--border-color); width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; border-radius: 20px;"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://twitter.com" target="_blank" title="Compartilhar no X" style="text-decoration: none; color: inherit; font-size: 14px; background: var(--bg-color); border: 1px solid var(--border-color); width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; border-radius: 20px;"><i class="fab fa-x-twitter"></i></a>
+                <a href="https://linkedin.com" target="_blank" title="Compartilhar no LinkedIn" style="text-decoration: none; color: inherit; font-size: 14px; background: var(--bg-color); border: 1px solid var(--border-color); width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; border-radius: 20px;"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+
+            <select class="lang-select" id="langSelect">
+                <option value="pt">PT</option>
+                <option value="en">EN</option>
+                <option value="es">ES</option>
+            </select>
+            <button class="theme-toggle" id="themeToggle" title="Alternar Tema">🌓</button>
+        </div>
+    </header>
+
+    <nav class="nav-sidebar" id="navSidebar">
+        <button class="close-menu-btn" id="closeMenuBtn" aria-label="Fechar menu">&times;</button>
+        <ul class="nav-menu">
+            <li><a href="#inicio" data-i18n="nav-inicio" class="active-link">Início</a></li>
+            <li><a href="#importancia" data-i18n="nav-importancia">Importância Vital</a></li>
+            <li><a href="#polinizacao" data-i18n="nav-polinizacao">Mecanismos Técnicos</a></li>
+            <li><a href="#seguranca" data-i18n="nav-seguranca">Segurança Alimentar</a></li>
+            <li><a href="#produtos" data-i18n="nav-produtos">Bio-Produtos Premium</a></li>
+            <li><a href="#contato" data-i18n="nav-contato">Contato</a></li>
+        </ul>
+    </nav>
+    
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <section class="spa-section active" id="inicio">
+        <div class="carousel-container">
+            <div class="carousel-slide active" style="background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.55)), url('assets/imagens/IMG_HERO_ABELHA_MACRO.png');">
+                <div class="carousel-caption">
+                    <h2 data-i18n="slide1-title">Dinamismo Biofísico e Vetores de Polinização</h2>
+                    <p data-i18n="slide1-desc">O elo biológico fundamental que regula a transferência de material genético floral nas angiospermas globais.</p>
+                </div>
+            </div>
+            <div class="carousel-slide" style="background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.55)), url('assets/imagens/IMG_POMAR_COMERCIAL_POLINIZACAO.png');">
+                <div class="carousel-caption">
+                    <h2 data-i18n="slide2-title">Arquitetura de Segurança Alimentar Global</h2>
+                    <p data-i18n="slide2-desc">Análise quantitativa de culturas de alto valor comercial dependentes estritamente de vetores bióticos.</p>
+                </div>
+            </div>
+            <div class="carousel-slide" style="background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.55)), url('assets/imagens/IMG_CIENCIA_ELETROSTATICA_POLEN.png');">
+                <div class="carousel-caption">
+                    <h2 data-i18n="slide3-title">Gradientes de Potencial e Resiliência Genética</h2>
+                    <p data-i18n="slide3-desc">A micro-engenharia natural que mitiga o abortamento de óvulos botânicos e preserva os ecossistemas.</p>
+                </div>
+            </div>
+            <button class="carousel-btn" id="prevBtn">&lt;</button>
+            <button class="carousel-btn" id="nextBtn">&gt;</button>
+            <div class="carousel-dots" id="carouselDots"></div>
+        </div>
+
+        <div class="section-header">
+            <h1 data-i18n="welcome-title">Introdução à Odisséia dos Polinizadores</h1>
+            <h3 data-i18n="welcome-subtitle">A simbiose biofísica entre a fauna melífera e a estabilidade agroecológica planetária.</h3>
+        </div>
+        <p class="rich-text" data-i18n="welcome-desc">
+            Esta plataforma de documentação técnico-científica atua como um repositório analítico dedicado a expor o papel incomensurável dos Hymenopteras no equilíbrio biológico da biosfera. Longe de exercerem uma mera função produtora de mel, as abelhas operam como engenheiras ecossistêmicas críticas. Suas dinâmicas comportamentais e interações físicas de microescala regulam as taxas de especiação, a variabilidade genética e a resiliência estrutural das principais macroculturas de interesse antrópico.
+        </p>
+
+        <div class="section-image-container">
+            <img src="assets/imagens/IMG_HERO_ABELHA_MACRO.png" alt="Macrofotografia técnica de uma abelha melífera acumulando pólen" class="gallery-image">
+        </div>
+    </section>
+
+    <section class="spa-section" id="importancia">
+        <div class="section-header">
+            <h1 data-i18n="imp-title">O Propósito Ecológico: Sustentação de Ecossistemas</h1>
+            <h3 data-i18n="imp-subtitle">Modelos de dependência trófica e o risco latente de colapso nos sistemas de produção primária.</h3>
+        </div>
+        <p class="rich-text" data-i18n="imp-main-text">
+            Bilhões de indivíduos dependem diretamente das funções sistêmicas desempenhadas pelos polinizadores bióticos. A degradação antropogênica contínua dessas populações, induzida pelo uso indiscriminado de agroquímicos neurotóxicos e pela fragmentação extrema de habitats, impõe uma severa vulnerabilidade à segurança nutricional global. Os polinizadores atuam como garantidores de que os gametófitos masculinos fertilizem de maneira ideal as estruturas receptoras das plantas, desencadeando rotas metabólicas que culminam em sementes de alta viabilidade celular e frutos com perfis moleculares ricos em macronutrientes cruciais.
+        </p>
+
+        <div class="grid-3col">
+            <div class="card">
+                <h3>🐝 <span data-i18n="card1-title">Homogeneidade Nutricional</span> <span class="badge" data-i18n="badge-rec">RELEVANTE</span></h3>
+                <p data-i18n="card1-desc">A polinização cruzada regula de maneira direta a biossíntese de vitaminas lipossolúveis (A, D, E, K) e hidrossolúveis (C) essenciais na homeostase metabólica humana.</p>
+            </div>
+            <div class="card">
+                <h3>🌻 <span data-i18n="card2-title">Homeostase da Flora Nativa</span></h3>
+                <p data-i18n="card2-desc">A preservação dos vetores melíferos garante a integridade fitossociológica das florestas tropicais, agindo indiretamente na ciclagem de nutrientes e regulação hídrica.</p>
+            </div>
+            <div class="card">
+                <h3>📈 <span data-i18n="card3-title">Robustez de Macrocommodities</span></h3>
+                <p data-i18n="card3-desc">Culturas agrícolas de alto valor financeiro internacional dependem de forma exponencial das taxas de visitação biótica para assegurar o índice de conversão econômica.</p>
+            </div>
+        </div>
+
+        <div class="section-image-container">
+            <img src="assets/imagens/IMG_POMAR_COMERCIAL_POLINIZACAO.png" alt="Visão aérea de um pomar comercial com caixas de apiários" class="gallery-image">
+        </div>
+    </section>
+
+    <section class="spa-section" id="polinizacao">
+        <div class="section-header">
+            <h1 data-i18n="mech-title">Mecanismos Biofísicos da Polinização Eletrostática</h1>
+            <h3 data-i18n="mech-subtitle">A eletrodinâmica molecular regulando o transporte e captura de grãos de pólen.</h3>
+        </div>
+        <p class="rich-text" data-i18n="mech-desc1">
+            Conforme amplamente validado em ensaios acadêmicos internacionais, a transferência mecânica de grãos de pólen das anteras para os estigmas é aperfeiçoada por propriedades elétricas físicas reguladas pelo efeito triboelétrico. Durante o voo, o atrito cinético do corpo da abelha com as correntes de ar induz a perda contínua de elétrons de sua cutícula e cerdas ramificadas, gerando um acúmulo estável de carga líquida estática positiva (+). Em contrapartida, as estruturas florais, inseridas no potencial de aterramento terrestre, mantêm-se eletricamente induzidas com cargas superficiais negativas (-).
+        </p>
+        <p class="rich-text" data-i18n="mech-desc2">
+            No momento em que a abelha atinge o limiar de aproximação milimétrico da flor, a magnitude desse campo elétrico local supera as forças de coesão molecular que retêm o pólen na antera. Esse diferencial cria uma força de atração coulombiana que projeta os grãos de pólen macroscopicamente pelo espaço aéreo, atraindo-os ao revestimento do inseto sem que haja necessidade de compressão física inicial. Adicionalmente, dinâmicas de polinização por vibração acústica de alta frequência (<i>buzz pollination</i>), exercida por gêneros especializados, provocam a ressonância mecânica de anteras poricidas, liberando o pólen aprisionado em culturas economicamente críticas.
+        </p>
+
+        <div class="bibliography-box">
+            <h4 data-i18n="bib-title1">Referências Bibliográficas Selecionadas (Mecanismos Físicos):</h4>
+            <ul>
+                <li>CLARKE, D.; WHITNEY, H.; SUTTON, G.; ROBERT, D. <b>Detection and Learning of Floral Electric Fields by Bumblebees</b>. <i>Science</i>, v. 340, n. 6128, p. 66-69, 2013. DOI: 10.1126/science.1230883.</li>
+                <li>CORBET, S. A. et al. <b>Postulated role of charge transfer in the pollination of flowers by bees</b>. <i>Nature</i>, v. 243, n. 5406, p. 323-324, 1973. DOI: 10.1038/243323a0.</li>
+            </ul>
+        </div>
+
+        <div class="section-image-container">
+            <img src="assets/imagens/IMG_CIENCIA_ELETROSTATICA_POLEN.png" alt="Ilustração científica tridimensional mostrando a atração eletrostática do pólen" class="gallery-image">
+        </div>
+    </section>
+
+    <section class="spa-section" id="seguranca">
+        <div class="section-header">
+            <h1 data-i18n="sec-title">Variabilidade Nutricional e Resiliência Comercial das Culturas</h1>
+            <h3 data-i18n="sec-subtitle">Métricas e modelos matemáticos de interdependência agronômica e produtividade.</h3>
+        </div>
+
+        <div class="metrics-container">
+            <div class="metric-block">
+                <div class="metric-value">75%</div>
+                <div class="metric-label" data-i18n="m1-lbl">Das espécies vegetais de interesse econômico alimentar global dependem do fluxo de polinização cruzada biótica.</div>
+            </div>
+            <div class="metric-block">
+                <div class="metric-value">1/3</div>
+                <div class="metric-label" data-i18n="m2-lbl">Do volume total da ingestão nutricional humana primária provém diretamente da atividade metabólica indireta dos polinizadores.</div>
+            </div>
+            <div class="metric-block">
+                <div class="metric-value">+30%</div>
+                <div class="metric-label" data-i18n="m3-lbl">De ganho médio de peso em frutos bem polinizados, reduzindo o índice de deformidades estruturais e abortamento.</div>
+            </div>
+        </div>
+
+        <p class="rich-text" data-i18n="sec-desc">
+            A produção agrícola de alta densidade técnica torna-se inviável se isolada do equilíbrio populacional dos polinizadores. O pegamento completo dos frutos desencadeia a síntese regulada de fitormônios endógenos (como auxinas e giberelinas) nos tecidos vegetais, o que otimiza de forma expressiva o acúmulo de matéria seca, açúcares solúveis e antioxidantes. Cenários analíticos de declínio dessas populações indicam uma crisis inflacionária severa e desequilíbrio calórico global, afetando diretamente a oferta e homogeneidade morfológica de culturas perenes como abacates, café, laranjas, maçãs e tomates.
+        </p>
+
+        <div class="bibliography-box">
+            <h4 data-i18n="bib-title2">Referências Bibliográficas Selecionadas (Agronomia Global):</h4>
+            <ul>
+                <li>KLEIN, A. M. et al. <b>Importance of pollinators in changing landscapes for world crops</b>. <i>Proceedings of the Royal Society B: Biological Sciences</i>, v. 274, n. 1608, p. 303-313, 2007. DOI: 10.1098/rspb.2006.3721.</li>
+                <li>EILERS, E. J. et al. <b>Contribution of Pollinator-Mediated Crops to Nutrients in the Human Food Supply</b>. <i>PLoS ONE</i>, v. 6, n. 10, p. e25801, 2011. DOI: 10.1371/journal.pone.0025801.</li>
+            </ul>
+        </div>
+
+        <div class="section-image-container">
+            <img src="assets/imagens/IMG_DASHBOARD_SEGURANCA_ALIMENTAR.png" alt="Fotografia editorial de uma mesa com alimentos dependentes de polinização" class="gallery-image">
+        </div>
+    </section>
+
+    <section class="spa-section" id="produtos">
+        <div class="section-header">
+            <h1 data-i18n="prod-title">Bio-Produtos Apícolas de Grau Farmacêutico e Nutracêutico</h1>
+            <h3 data-i18n="prod-subtitle">A bioprospecção de metabólitos secundários e bioativos padronizados para alta performance biológica.</h3>
+        </div>
+        <p class="rich-text" data-i18n="prod-intro-text">
+            Nossos bio-produtos provêm de ecossistemas controlados, livres de contaminantes químicos e metais pesados. Toda a extração respeita rigorosos protocolos agroecológicos de mínima intervenção, garantindo a preservação das frações moleculares e bioativas originais geradas pela simbiose flor-vetor.
+        </p>
+
+        <div class="store-filter-bar">
+            <button class="filter-btn active" data-filter="all" data-i18n="filter-all">Todos os Produtos</button>
+            <button class="filter-btn" data-filter="mel" data-i18n="filter-mel">Meles Especiais</button>
+            <button class="filter-btn" data-filter="propolis" data-i18n="filter-propolis">Extratos & Própolis</button>
+            <button class="filter-btn" data-filter="nutra" data-i18n="filter-nutra">Nutracêuticos</button>
+        </div>
+
+        <div class="products-grid">
+            
+            <div class="product-card" data-category="mel">
+                <div class="prod-badge" data-i18n="badge-pure">100% ORGÂNICO</div>
+                <div class="prod-image-wrapper">
+                    <img src="assets/imagens/PROD_MEL_SILVESTRE.png" alt="Mel de Floração Nativa Silvestre Premium" class="prod-image">
+                </div>
+                <div class="prod-info">
+                    <h4 class="prod-name" data-i18n="p1-name">Mel Ativo de Floração Nativa Silvestre</h4>
+                    <p class="prod-desc" data-i18n="p1-desc">Superfície enzimática preservada. Rico em flavonoides residuais e ácidos fenólicos com alta capacidade de atenuação de radicais livres (ORAC elevado).</p>
+                    <div class="prod-meta"><strong>Massa Líquida:</strong> 450g | <strong>pH:</strong> 3.9</div>
+                    <div class="prod-footer">
+                        <span class="prod-price">R$ 89,90</span>
+                        <div class="prod-actions">
+                            <input type="number" class="prod-qty" value="1" min="1">
+                            <button class="btn-add-cart" data-id="p1" data-i18n="btn-buy">Comprar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="propolis">
+                <div class="prod-badge standard" data-i18n="badge-std">PADRONIZADO</div>
+                <div class="prod-image-wrapper">
+                    <img src="assets/imagens/PROD_PROPOLIS_VERDE.png" alt="Extrato de Própolis Verde Ultra-Concentrado" class="prod-image">
+                </div>
+                <div class="prod-info">
+                    <h4 class="prod-name" data-i18n="p2-name">Extrato de Própolis Verde Ultra-Concentrado</h4>
+                    <p class="prod-desc" data-i18n="p2-desc">Isolado biológico derivado do <i>Baccharis dracunculifolia</i>. Concentração molecular mínima certificada de Artepillin-C (superior a 7.5mg/ml).</p>
+                    <div class="prod-meta"><strong>Volume:</strong> 30ml | <strong>Solvente:</strong> Álcool Neutro</div>
+                    <div class="prod-footer">
+                        <span class="prod-price">R$ 124,00</span>
+                        <div class="prod-actions">
+                            <input type="number" class="prod-qty" value="1" min="1">
+                            <button class="btn-add-cart" data-id="p2" data-i18n="btn-buy">Comprar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="nutra">
+                <div class="prod-badge premium" data-i18n="badge-prem">PREMIUM BIO</div>
+                <div class="prod-image-wrapper">
+                    <img src="assets/imagens/PROD_GELEIA_REAL.png" alt="Geleia Real Liofilizada Premium" class="prod-image">
+                </div>
+                <div class="prod-info">
+                    <h4 class="prod-name" data-i18n="p3-name">Geleia Real Humana Liofilizada em Cápsulas</h4>
+                    <p class="prod-desc" data-i18n="p3-desc">Estabilizada via criodesidratação a vácuo para preservação total do ácido 10-hidroxidecenóico (10-HDA), cofatores enzimáticos e imunoglobulinas.</p>
+                    <div class="prod-meta"><strong>Dose:</strong> 60 Cápsulas de 500mg | <strong>10-HDA:</strong> 6%</div>
+                    <div class="prod-footer">
+                        <span class="prod-price">R$ 198,50</span>
+                        <div class="prod-actions">
+                            <input type="number" class="prod-qty" value="1" min="1">
+                            <button class="btn-add-cart" data-id="p3" data-i18n="btn-buy">Comprar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="spa-section" id="contato">
+        <div class="section-header">
+            <h1 data-i18n="ct-title">Manifesto de Engajamento e Contato</h1>
+            <h3 data-i18n="ct-subtitle">Articulação institucional para a mitigação de impactos sobre polinizadores nativos.</h3>
+        </div>
+
+        <div class="contact-form-container">
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="userName" data-i18n="lbl-name">Nome Institucional / Pesquisador</label>
+                    <input type="text" id="userName" required placeholder="Digite seu nome completo ou corporativo">
+                </div>
+                <div class="form-group">
+                    <label for="userEmail" data-i18n="lbl-email">Endereço Eletrônico Acadêmico</label>
+                    <input type="email" id="userEmail" required placeholder="pesquisa@dominio.org">
+                </div>
+                <div class="form-group">
+                    <label for="userMsg" data-i18n="lbl-msg">Proposta de Cooperação Científica</label>
+                    <textarea id="userMsg" rows="5" required placeholder="Descreva os escopos do projeto ou linhas de pesquisa voltadas à conservação biológica..."></textarea>
+                </div>
+                <button type="submit" class="btn-submit" data-i18n="btn-send">Submeter Manifesto Técnico</button>
+            </form>
+            <div id="formFeedback" class="feedback-msg hidden"></div>
+        </div>
+
+        <!-- Ícones atualizados do rodapé com Font Awesome + WhatsApp -->
+        <div class="social-footer-share" style="display: flex; justify-content: center; gap: 12px; margin-top: 35px; padding-top: 20px; border-top: 1px solid var(--border-color);">
+            <a href="https://api.whatsapp.com/send?text=Confira%20o%20EcoAbelhas!" target="_blank" title="Compartilhar no WhatsApp" style="text-decoration: none; color: inherit; font-size: 16px; background: var(--card-bg); border: 1px solid var(--border-color); width: 38px; height: 38px; display: flex; align-items: center; justify-content: center; border-radius: 50%;"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://facebook.com" target="_blank" title="Compartilhar no Facebook" style="text-decoration: none; color: inherit; font-size: 16px; background: var(--card-bg); border: 1px solid var(--border-color); width: 38px; height: 38px; display: flex; align-items: center; justify-content: center; border-radius: 50%;"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com" target="_blank" title="Compartilhar no X" style="text-decoration: none; color: inherit; font-size: 16px; background: var(--card-bg); border: 1px solid var(--border-color); width: 38px; height: 38px; display: flex; align-items: center; justify-content: center; border-radius: 50%;"><i class="fab fa-x-twitter"></i></a>
+            <a href="https://linkedin.com" target="_blank" title="Compartilhar no LinkedIn" style="text-decoration: none; color: inherit; font-size: 16px; background: var(--card-bg); border: 1px solid var(--border-color); width: 38px; height: 38px; display: flex; align-items: center; justify-content: center; border-radius: 50%;"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 EcoAbelhas. <span data-i18n="foot-rights">Todos os direitos reservados. Relatório de Divulgação Científica.</span></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
