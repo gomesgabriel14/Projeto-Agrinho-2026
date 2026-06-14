@@ -10,7 +10,14 @@ Repositório GitHub: https://github.com/gomesgabriel14/Projeto-Agrinho-2026/tree
 Deploy Habilitado (GitHub Pages ou Vercel): https://gomesgabriel14.github.io/Projeto-Agrinho-2026/
 
 ## Descrição do Projeto e Objetivos
+O EcoAbelhas é um site educativo e interativo desenvolvido para conscientizar a população sobre a importância das abelhas para a biodiversidade, a agricultura e a sustentabilidade ambiental. A plataforma apresenta informações sobre o papel dos polinizadores na produção de alimentos, os desafios enfrentados pelas abelhas e as ações que podem contribuir para sua preservação.
+O projeto foi criado utilizando exclusivamente HTML, CSS e JavaScript, conforme os requisitos da categoria de Programação Front-End, proporcionando uma experiência moderna, acessível e responsiva para usuários em diferentes dispositivos.
+Por meio de uma interface intuitiva, o usuário pode navegar por conteúdos informativos, conhecer curiosidades sobre as abelhas, compreender a importância da polinização para a produção agrícola e explorar recursos interativos que tornam o aprendizado mais dinâmico e envolvente.
+Além de destacar a relevância ambiental das abelhas, o site estabelece uma conexão direta com o tema "Agro forte, futuro sustentável: equilíbrio entre produção e meio ambiente", demonstrando que a preservação dos polinizadores é essencial para garantir a produtividade agrícola, a segurança alimentar e a manutenção dos ecossistemas.
+O desenvolvimento do EcoAbelhas também permitiu a aplicação prática de conhecimentos em programação web, design responsivo, acessibilidade digital e organização de conteúdo educacional, evidenciando como a tecnologia pode ser utilizada como ferramenta de conscientização, aprendizagem e transformação social.
 
+
+O projeto EcoAbelhas foi desenvolvido com o objetivo de promover a conscientização sobre a importância das abelhas para a manutenção da biodiversidade, da produção agrícola e da sustentabilidade ambiental, utilizando a tecnologia como ferramenta de educação e disseminação do conhecimento.
 
 ##Principais Funcionalidades:
 * Interface Responsiva focada na experiência do usuário.
@@ -38,19 +45,19 @@ Prompt Profissional para IA:
      Mel flora
 3. [ Premium  editorial product photography of a minimalist glass jar filled with amber  wildflower honey. Golden metallic lid, elegant textured paper label with subtle  geometric bee patterns. Placed on a dark slate surface, soft side-window  lighting, macro shot on 50mm lens, shallow depth of field, sharp textures of  thick honey drops on a wooden dipper next to the jar, high-end organic brand  aesthetic, 8k resolution.]
    Própolis
-5. [1.     High-end pharmaceutical product shot of a dark amber glass dropper bottle containing organic green propolis extract. Modern matte label with scientific branding and chemical structure accents. Positioned against a clean, neutral studio background with elegant soft shadows. Professional studio lighting, hyper-realistic, raytracing, 8k resolution, cinematic grading, focus on premium laboratory-grade presentation.]
+4. [     High-end pharmaceutical product shot of a dark amber glass dropper bottle containing organic green propolis extract. Modern matte label with scientific branding and chemical structure accents. Positioned against a clean, neutral studio background with elegant soft shadows. Professional studio lighting, hyper-realistic, raytracing, 8k resolution, cinematic grading, focus on premium laboratory-grade presentation.]
 Apis cere
 
-6. [1.     Editorial luxury wellness product photography of a premium white ceramic jar with a gold minimalist cap containing freeze-dried Royal Jelly capsules. Placed on a polished concrete surface with abstract shadows of botanical leaves. Soft cinematic lighting, crisp textures, shot on Hasselblad H6D, architectural composition, organic luxury skin-nutrition concepts, 8k resolution.]
-7. Identificador: IMG_HERO_ABELHA_MACRO
+5. [1.     Editorial luxury wellness product photography of a premium white ceramic jar with a gold minimalist cap containing freeze-dried Royal Jelly capsules. Placed on a polished concrete surface with abstract shadows of botanical leaves. Soft cinematic lighting, crisp textures, shot on Hasselblad H6D, architectural composition, organic luxury skin-nutrition concepts, 8k resolution.]
+6. Identificador: IMG_HERO_ABELHA_MACRO
    
-9. [Resolução Nativa: 7680 × 4320 pixels (8K UHD, proporção de aspecto 16:9).  Prompt Profissional para IA:  An award-winning extreme macro photography of a single Apis mellifera (honeybee) perched elegantly on a vibrant yellow sunflower. The bee's body is covered in ultra-detailed, microscopic, glowing grains of golden pollen clinging statically to its hair. High-end scientific documentation style, shot on 85mm macro lens, f/8 aperture for deep depth of field, sharp focus on the compound eye and pollen textures, realistic natural morning sunlight diffraction, 8k resolution, cinematic raw texture, hyper-realistic biology photography.]
-10. Identificador: IMG_POMAR_COMERCIAL_POLINIZACAO
-11. Seção de Destino: Importância Vital.
+7. [Resolução Nativa: 7680 × 4320 pixels (8K UHD, proporção de aspecto 16:9).  Prompt Profissional para IA:  An award-winning extreme macro photography of a single Apis mellifera (honeybee) perched elegantly on a vibrant yellow sunflower. The bee's body is covered in ultra-detailed, microscopic, glowing grains of golden pollen clinging statically to its hair. High-end scientific documentation style, shot on 85mm macro lens, f/8 aperture for deep depth of field, sharp focus on the compound eye and pollen textures, realistic natural morning sunlight diffraction, 8k resolution, cinematic raw texture, hyper-realistic biology photography.]
+8. Identificador: IMG_POMAR_COMERCIAL_POLINIZACAO
+ Seção de Destino: Importância Vital.
 
-Resolução Nativa: 7680 × 4320 pixels (8K UHD, proporção de aspecto 16:9).
-11. [Resolução Nativa: 7680 × 4320 pixels (8K UHD, proporção de aspecto 16:9).  Prompt Profissional para IA:  Commercial agriculture drone perspective, a vast and flourishing almond orchard in full white and pink blossom during spring. Neatly organized rows of healthy trees stretching into the background with a series of wooden bee apiary boxes placed strategically along the green grass lanes. Thousands of tiny bees visible as subtle motion-blurred streaks flying between the blossoms under a crisp blue sky. Shot on Hasselblad H6D-100c, sharp landscape architecture, architectural symmetry, sustainable farming concept, hyper-realistic, 8k resolution, vibrant natural grading.]
-12. 
+Resolução Nativa: 7680 × 4320 pixels (8K UHD, proporção de aspecto 16:9)
+[Resolução Nativa: 7680 × 4320 pixels (8K UHD, proporção de aspecto 16:9).  Prompt Profissional para IA:  Commercial agriculture drone perspective, a vast and flourishing almond orchard in full white and pink blossom during spring. Neatly organized rows of healthy trees stretching into the background with a series of wooden bee apiary boxes placed strategically along the green grass lanes. Thousands of tiny bees visible as subtle motion-blurred streaks flying between the blossoms under a crisp blue sky. Shot on Hasselblad H6D-100c, sharp landscape architecture, architectural symmetry, sustainable farming concept, hyper-realistic, 8k resolution, vibrant natural grading.]
+ 
  ## Estrutura de Arquivos do Repositório
 ```text
 ├── index.html          # Estrutura semântica da página
