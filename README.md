@@ -7,7 +7,7 @@ Município: Mato Rico
 Prof: Orientador: Jovani Kordun
 Links da Aplicação
 Repositório GitHub:
-Deploy Habilitado (GitHub Pages ou Vercel):
+Deploy Habilitado (GitHub Pages ou Vercel): https://gomesgabriel14.github.io/Projeto-Agrinho-2026/
 
 ## Descrição do Projeto e Objetivos
 
