@@ -6,7 +6,7 @@ Escola: Colégio Estadual Adélia Bianco Seguro
 Município: Mato Rico
 Prof: Orientador: Jovani Kordun
 Links da Aplicação
-Repositório GitHub:
+Repositório GitHub: https://github.com/gomesgabriel14/Projeto-Agrinho-2026/tree/main
 Deploy Habilitado (GitHub Pages ou Vercel): https://gomesgabriel14.github.io/Projeto-Agrinho-2026/
 
 ## Descrição do Projeto e Objetivos
